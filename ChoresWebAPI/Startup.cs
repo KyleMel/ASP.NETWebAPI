@@ -11,6 +11,8 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Microsoft.EntityFrameworkCore;
+using ChoresWebAPI.Models;
 
 namespace ChoresWebAPI
 {
@@ -28,10 +30,8 @@ namespace ChoresWebAPI
         {
 
             services.AddControllers();
-            services.AddSwaggerGen(c =>
-            {
-                c.SwaggerDoc("v1", new OpenApiInfo { Title = "ChoresWebAPI", Version = "v1" });
-            });
+            services.AddDbContext<ChoresContext>(opt =>
+                                               opt.UseInMemoryDatabase("TodoList"));
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -40,8 +40,6 @@ namespace ChoresWebAPI
             if (env.IsDevelopment())
             {
                 app.UseDeveloperExceptionPage();
-                app.UseSwagger();
-                app.UseSwaggerUI(c => c.SwaggerEndpoint("/swagger/v1/swagger.json", "ChoresWebAPI v1"));
             }
 
             app.UseHttpsRedirection();

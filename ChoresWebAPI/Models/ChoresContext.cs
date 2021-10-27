@@ -6,9 +6,9 @@ using Microsoft.EntityFrameworkCore;
 
 namespace ChoresWebAPI.Models
 {
-    public class TodoContext : DbContext
+    public class ChoresContext : DbContext
     {
-        public TodoContext(DbContextOptions<TodoContext> options)
+        public ChoresContext(DbContextOptions<ChoresContext> options)
             : base(options)
         {
         }
