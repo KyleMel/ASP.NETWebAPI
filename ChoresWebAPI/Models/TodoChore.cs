@@ -9,6 +9,6 @@ namespace ChoresWebAPI.Models
     {
         public int Id { get; set; }
         public string ChoreName { get; set; }
-        
+        public bool IsComplete { get; set; }
     }
 }
