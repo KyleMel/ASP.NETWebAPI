@@ -80,7 +80,7 @@ namespace ChoresWebAPI.Controllers
             _context.TodoChores.Add(todoChore);
             await _context.SaveChangesAsync();
 
-            return CreatedAtAction("GetTodoChore", new { id = todoChore.Id }, todoChore);
+            return CreatedAtAction(nameof(GetTodoChore), new { id = todoChore.Id }, todoChore);
         }
 
         // DELETE: api/TodoChores/5
