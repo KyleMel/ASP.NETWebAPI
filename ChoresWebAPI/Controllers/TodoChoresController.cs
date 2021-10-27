@@ -9,7 +9,7 @@ using ChoresWebAPI.Models;
 
 namespace ChoresWebAPI.Controllers
 {
-    [Route("api/[controller]")]
+    [Route("api/TodoChores")]
     [ApiController]
     public class TodoChoresController : ControllerBase
     {
