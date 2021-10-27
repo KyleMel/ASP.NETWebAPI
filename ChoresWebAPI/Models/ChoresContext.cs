@@ -16,6 +16,6 @@ namespace ChoresWebAPI.Models
 
         public DbSet<TodoChore> TodoChores { get; set; }
 
-        public DbSet<ChoresWebAPI.Models.TodoAssignment> TodoAssignment { get; set; }
+        public DbSet<TodoAssignment> TodoAssignment { get; set; }
     }
 }
