@@ -18,6 +18,7 @@ namespace ChoresWebAPI.Controllers
         public TodoChoresController(ChoresContext context)
         {
             _context = context;
+            _context.Database.EnsureCreated();
         }
 
         // GET: api/TodoChores
