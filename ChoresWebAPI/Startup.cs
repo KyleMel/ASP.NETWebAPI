@@ -23,7 +23,7 @@ namespace ChoresWebAPI
 
             services.AddControllers();
             services.AddDbContext<ChoresContext>(opt =>
-                                               opt.UseInMemoryDatabase("TodoList"));
+                                               opt.UseSqlServer(Configuration.GetConnectionString("MyConnection")));
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
