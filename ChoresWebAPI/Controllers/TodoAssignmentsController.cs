@@ -44,7 +44,7 @@ namespace ChoresWebAPI.Controllers
         // PUT: api/TodoAssignments/5
         // To protect from overposting attacks, see https://go.microsoft.com/fwlink/?linkid=2123754
         [HttpPut("{id}")]
-        public async Task<IActionResult> PutTodoAssignment(string id, TodoAssignment todoAssignment)
+        public async Task<IActionResult> PutTodoAssignment(int id, TodoAssignment todoAssignment)
         {
             if (id != todoAssignment.Id)
             {
@@ -113,7 +113,7 @@ namespace ChoresWebAPI.Controllers
             return NoContent();
         }
 
-        private bool TodoAssignmentExists(string id)
+        private bool TodoAssignmentExists(int id)
         {
             return _context.TodoAssignment.Any(e => e.Id == id);
         }
