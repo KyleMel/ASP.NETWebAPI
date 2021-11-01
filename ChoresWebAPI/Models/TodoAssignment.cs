@@ -7,7 +7,7 @@ namespace ChoresWebAPI.Models
 {
     public class TodoAssignment
     {
-        public string Id { get; set; }
+        public int Id { get; set; }
         public string ChoreAssignment { get; set; }
     }
 }
